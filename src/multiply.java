@@ -16,12 +16,6 @@ public class multiply {
         StringBuilder sb1 = new StringBuilder(num1);
         StringBuilder sb2 = new StringBuilder(num2);
         StringBuilder res = new StringBuilder("0");
-//        if (sb1.length()<sb2.length()) {
-//            StringBuilder tmp = new StringBuilder();
-//            tmp = sb1;
-//            sb1 = sb2;
-//            sb2 = tmp;
-//        }
         for (int i=sb2.length()-1;i>=0;i--){
             int c = sb2.charAt(i)-'0';
             if (c==0) continue;
