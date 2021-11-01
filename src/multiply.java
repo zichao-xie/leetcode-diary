@@ -57,6 +57,35 @@ public class multiply {
         return res.toString();
     }
 
+    /**
+     * @author  xzc
+     * @date  2021/11/1 19:31
+     * @time  75.77
+     * @memory  97.75
+     * @description  定理：长度为n和m的数字相乘，结果长度不会超过n+m。
+     *  用数组存每次相乘的结果。
+     */
+    public static String multiply2(String num1, String num2) {
+        int n = num1.length(), m = num2.length();
+        int [] res = new int[n+m];
+        for (int i = n-1; i >=0 ; i--) {
+            for (int j = m-1; j >=0 ; j--) {
+                int x = num1.charAt(i)-'0';
+                int y = num2.charAt(j)-'0';
+                int r = x*y+res[i+j+1];
+                res[i+j+1] = r%10;
+                res[i+j] += r/10;//注意这里！！！！
+            }
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < n+m; i++) {
+            if (stringBuilder.length()==0&&res[i]==0) continue;
+            stringBuilder.append(res[i]);
+        }
+        return stringBuilder.length()==0?"0":stringBuilder.toString();
+    }
+
+
     public static void main(String[] args) {
         System.out.println(multiply("210","300000000000000000000000000"));
     }
