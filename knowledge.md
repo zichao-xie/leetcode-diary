@@ -6,3 +6,16 @@
 ```java
 String.valueOf(chars);
 ```
+- list可用set初始化
+```java
+List<Character> list = new ArrayList<>(map.keySet());
+```
+- list排序
+```java
+//降序
+Collections.sort(list,(a,b)-> map.get(b)-map.get(a))
+```
+- String重复添加字符
+```java
+sb.append(String.valueOf(c).repeat(f));
+```
