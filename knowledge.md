@@ -19,3 +19,7 @@ Collections.sort(list,(a,b)-> map.get(b)-map.get(a))
 ```java
 sb.append(String.valueOf(c).repeat(f));
 ```
+- 数组求和
+```java
+Arrays.stream(w).sum();
+```
