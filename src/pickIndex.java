@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @time 2021/11/16 21:16
  * @number 528
  */
-public class Solution {
+ class Solution {
     /**
      * @author  xzc
      * @date  2021/11/16 21:51
