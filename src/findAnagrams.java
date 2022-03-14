@@ -18,7 +18,6 @@ public class findAnagrams {
         int l = 0, r = 0;
         while (r<n){
             c1[s.charAt(r)-'a']++;
-
         }
     }
 }
